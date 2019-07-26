@@ -1,0 +1,57 @@
+/* Global imports */
+
+@import "./src/assets/styles/imports";
+
+/* Custom styles */
+
+:host ::ng-deep {
+    .smooth-dnd-container {
+        &.vertical {
+            background: #e0e4e8;
+            padding: 0.5rem 0.2rem 0rem;
+            overflow-y: auto;
+            margin: 0 0.5rem;
+            min-height: 4rem;
+            max-height: calc(100vh - 10rem);
+            margin-bottom: 1rem;
+            border-radius: 0.2rem;
+            @include scrollbar();
+        }
+    }
+}
+
+:host {
+    &.last-item {
+        .column {
+            margin-right: 0;
+        }
+    }
+}
+
+//////
+// COLUMN STYLE
+.column {
+    max-height: calc(100vh - 5rem);
+    width: 20rem;
+    background: #e9ecef;
+    border-radius: 0.2rem;
+    margin-right: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    .column-drag-handle {
+        cursor: grab;
+        padding: 0.5rem 1rem;
+        color: #abaeb1;
+        transition: all 0.1s ease-in;
+        &:hover {
+            color: currentColor;
+        }
+    }
+    .column-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #333;
+        padding: 1rem 1rem 1rem 0;
+        margin-bottom: 0;
+    }
+}

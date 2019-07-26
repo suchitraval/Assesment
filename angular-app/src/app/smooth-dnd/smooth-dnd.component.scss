@@ -1,0 +1,22 @@
+/* Global imports */
+
+@import "./src/assets/styles/imports";
+
+/* Custom styles */
+
+ :host ::ng-deep {
+    .smooth-dnd-container {
+        &.horizontal {
+            overflow-x: auto;
+            // height: calc(100vh - 3.5rem);
+            @include scrollbar();
+        }
+    }
+}
+
+.feather {
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 3;
+    vertical-align: sub;
+}
